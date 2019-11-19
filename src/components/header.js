@@ -22,21 +22,39 @@ const Header = ({ siteTitle, siteDescription }) => {
         background: `url("${data.file.childImageSharp.original.src}") no-repeat center`,
         backgroundSize: "cover",
         color: "white",
-        textShadow: "black 1px 1px 1px",
+        // textShadow: "black 1px 1px 1px",
         marginBottom: "4rem",
       }}
     >
       <div
         style={{
-          padding: "4rem 0rem",
-          backgroundColor: "rgba(0,0,0,0.5)",
+          padding: "10rem 0rem",
+          // backgroundColor: "rgba(0,0,0,0.5)",
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <div>
-          <h1 className="display-4">{siteTitle}</h1>
-          <p className="lead">{siteDescription}</p>
+        <div style={{ textAlign: "center" }}>
+          <h1
+            className="display-4"
+            style={{
+              backgroundColor: "#101820",
+              display: "inline-block",
+              borderBottom: "3px solid #FFB612",
+              marginBottom: 0,
+              padding: "0 1rem",
+            }}
+          >
+            {siteTitle}
+          </h1>
+          <div
+            className="lead"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <p style={{ backgroundColor: "#101820", padding: "0 1rem" }}>
+              (the insider guidebook)
+            </p>
+          </div>
         </div>
       </div>
     </header>

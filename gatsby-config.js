@@ -36,7 +36,10 @@ module.exports = {
         spreadsheetId: "1W5cp07OL_W5j6FBt1j7wPnWSIRAoKerFivALp7R_ZCk",
         // spreadsheetName: "So You're Visiting Pittsburgh",
         typePrefix: "GoogleSpreadsheet",
-        credentials: require("./google-credentials.js"),
+        credentials: {
+          private_key: process.env.GOOGLE_PRIVATE_KEY,
+          client_email: process.env.GOOGLE_CLIENT_EMAIL,
+        },
 
         // Simple node transformation during node sourcing can be achieved by implementing the following functions
         // - `filterNode`

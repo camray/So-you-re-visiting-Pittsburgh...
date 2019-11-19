@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -25,6 +25,16 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  // Google analytics
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      window.dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+    gtag("config", "UA-151727989-1")
+  }, [])
 
   return (
     <div className="">

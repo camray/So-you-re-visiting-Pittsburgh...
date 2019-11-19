@@ -45,7 +45,7 @@ const IndexPage = () => {
         <h5>Categories:</h5>
         <ul className="nav nav-pills">
           {categories.map(c => (
-            <li className="nav-link" role="presentation">
+            <li key={c.id} className="nav-link" role="presentation">
               <a className="categoryLink" href={`#${c.id}`}>
                 {c.category}
               </a>
